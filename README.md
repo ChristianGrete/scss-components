@@ -3,7 +3,7 @@ SCSS-Components
 
 A package which includes much components and helpers for Scss.
 
-Dependencies
+Overview
 ===============
 
 * Create a grid
@@ -17,24 +17,18 @@ Dependencies
 * Crossbrowser-Animations
 * Helper-Mixins (Placeholder, User-Select etc.)
 
-Dependencies
+Structure of scss
 ===============
-
-* Bower
-* Grunt
-* Sass
-* Compass
+    |- _addons/
+    |- _css3/
+    |- _functions/
+    |- _helpers/
+    |- components.scss
 
 How-To
 ===============
 
-## Mixins
-
-### Clearfix
-Clear your floatings - it's necessary.
-
-    // Use mixin
-    @include clearfix();
+## Addons
 
 ### Grid
 It was never so easy to create your own responsive grid and you are so flexible.
@@ -92,28 +86,8 @@ It was never so easy to create your own responsive grid and you are so flexible.
     .l-col--4 // four twelfths
     .l-col--6 // Half cols
 
-### Fonts
-Create the font-size not only in pixels. Use "rem" too.
-
-    // Set in your html the font-size to 62.5%, then it's easier to calculate
-    // Result = 16px
-    @include font-size(1.6);
-
 ### Icons
-It's easy to get some icons. You must only set an array in your config and include the mixin.
-
-    // Create the array
-    $icons: {
-      'css' 'a',
-      'briefcase' 'b',
-      'apple' 'c',
-      'html' 'd',
-      'happy-smiley' 'e',
-      'home' 'f'
-    }
-
-    // Mixin to create a class for each icon,
-    // ".icon--" is your prefix and use 'before' or 'after'
+Loop through your set of icons
     @each $icon in $icons {
       $name: nth($icon, 1);
       .icon--#{$name} {
@@ -121,16 +95,18 @@ It's easy to get some icons. You must only set an array in your config and inclu
       }
     }
 
-### Mediaqueries / Mobile First
-The time is over to write for each mediaquery the pixel. You can write something like this:
-
-    @include respond-to('tablet') {
-      @content;
+### Lists
+Reset list-styles
+    // Scss
+    .element {
+      @include list-reset();
     }
 
-### Triangle
-    @include triangle($direction, $size, $color) {
-      @content;
+    // CSS
+    .element {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
 ### SVG
@@ -140,18 +116,180 @@ It's not easy to use - some browsers can't handle it. Because of this we must us
     // First parameter is for the url without file-format, second for file-format
     @include svg-fallback('assets/img/fallback', 'jpg');
 
-### Helper-Mixins
-Some things are really pain in the ass. I will give you some helpers, which compass doesn't have.
 
-    // Placeholder
+### Triangle
+    @include triangle($direction, $size, $color) {
+      @content;
+    }
+
+## Helpers
+
+### Clearfix
+Clear your floatings - it's necessary.
+
+    // Use mixin
+    @include clearfix();
+
+### Fonts
+Create the font-size not only in pixels. Use "rem" too.
+
+    // Set in your html the font-size to 62.5%, then it's easier to calculate
+    // Result = 16px
+    @include font-size(1.6);
+
+### Mediaqueries / Mobile First
+The time is over to write for each mediaquery the pixel. You can write something like this:
+
+    // Define a variable with all your breakpoints
+    $breakpoints: (
+      'mobile-landscape' 480px,
+      'smaller-tablet' 600px,
+      'tablet' 768px,
+      'tablet-landscape' '920px'
+    );
+
+    // Use it
+    @include respond-to('tablet') {
+      @content;
+    }
+
+### CSS3
+Some stuff to use css3-properties easier and without writing for each the prefix.
+
+### Placeholder
     // Give placeholder a styling (Cross-Browser)
     @include placeholder() {
       color: red;
     }
 
-    // User-Select
+### User-Select
     // Cross-Browser - Define your type
     @include user-select('none');
+
+### Animations
+    // Basic
+    @include animation(colorchange .5s ease-in 1s);
+
+    // Animation-Name
+    @include animation-name(colorchange);
+
+    // Animation-Delay
+    @include animation-delay(.5s);
+
+    // Animation-Direction
+    @include animation-direction(normal);
+
+    // Animation-Duration
+    @include animation-duration(0s);
+
+    // Animation-Iteration-Count
+    @include animation-iteration-count(infinite);
+
+    // Animation-Play-State
+    @include animation-play-state(running);
+
+    // Animation-timing-function
+    @include animation-timing-function(linear);
+
+    // Animation-fill-mode
+    @include animation-fill-mode(forwards);
+
+    // Keyframes
+    @include keyframes(colorchange) {
+      0% {
+        color: red;
+      }
+      100% {
+        color: blue;
+      }
+    }
+
+### Transforms
+
+#### Translate
+    // Translate
+    @include translate(100%, 100%);
+
+    // TranslateX
+    @include translateX(100%);
+
+    // TranslateY
+    @include translateY(100%);
+
+    // TranslateZ
+    @include translateZ(0);
+
+    // Translate3d
+    @include translate3d(0,0,0);
+
+#### Skew
+    // Skew
+    @include skew(90deg);
+
+    // SkewX
+    @include skewX(45deg);
+
+    // SkewY
+    @include skewY(25deg);
+
+    // SkewZ
+    @include skewZ(0);
+
+#### Rotate
+    // Rotate
+    @include rotate(90deg);
+
+    // RotateX
+    @include rotateX(20deg);
+
+    // RotateY
+    @include rotateY(10deg);
+
+    // RotateZ
+    @include rotateZ(0);
+
+#### Scale
+    // Scale
+    @include scale(2);
+
+    // ScaleX
+    @include scaleX(3);
+
+    // ScaleY
+    @include scaleY(4);
+
+    // ScaleZ
+    @include scaleZ(0);
+
+    // Scale3d
+    @include scale3d(0);
+
+#### Other
+    // Perspective
+    @include perspective(300);
+
+    // Perspective-Origin
+    @include perspective-origin(top left);
+
+    // Transform-Style
+    @include transform-style(preserve3d);
+
+
+### Transitions
+    // Basic
+    @include transition(all .5s ease-in 1s);
+
+    // Transition-Property
+    @include transition-property(all);
+
+    // Transition-Delay
+    @include transition-delay(.5s);
+
+    // Transition-Duration
+    @include transition-duration(1s);
+
+    // Transition-Timing-Function
+    @include transition-timing-function(linear);
 
 ## Example of a config-file
 I use for these configuration a _config.scss, which has all the configurations and variables for the project.
@@ -174,20 +312,18 @@ I use for these configuration a _config.scss, which has all the configurations a
       'mobile-landscape' 480px,
       'smaller-tablet' 600px,
       'tablet' 768px,
-      'tablet-landscape' $max-wrapper-width,
-      'desktop' 1200px
+      'tablet-landscape' $max-wrapper-width
     );
 
     // Fonts
     $base-font-family: Helvetica, Arial, sans-serif;
     $base-font-size: 1.6
 
-## Bower
 
+## Bower
     bower install scss-components
 
-## Grunt
-
+## If you contribute...
 **Install all dependencies**
 
     npm install
@@ -200,3 +336,5 @@ I use for these configuration a _config.scss, which has all the configurations a
     patch - small fixes
     minor - new feature
     mayor - api-change
+
+I am really thankful for all the knowledge and code, which the developers share with us. You benefit of it.
