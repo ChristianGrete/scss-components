@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+// MIXIN: Transform-Translate
+@mixin translate($xvalue, $yvalue) {
+  -webkit-transform: translate($xvalue, yvalue);
+     -moz-transform: translate($xvalue, yvalue);
+      -ms-transform: translate($xvalue, yvalue);
+          transform: translate($xvalue, yvalue);
+}
+@mixin translateX($value) {
+  -webkit-transform: translateX($value);
+     -moz-transform: translateX($value);
+      -ms-transform: translateX($value);
+          transform: translateX($value);
+}
+@mixin translateY($value) {
+  -webkit-transform: translateY($value);
+     -moz-transform: translateY($value);
+      -ms-transform: translateY($value);
+          transform: translateY($value);
+}
+@mixin translateZ($value) {
+  -webkit-transform: translateZ($value);
+     -moz-transform: translateZ($value);
+      -ms-transform: translateZ($value);
+          transform: translateZ($value);
+}
+@mixin translate3d($xvalue, $yvalue, $zvalue) {
+  -webkit-transform: translate3d($xvalue, $yvalue, $zvalue);
+     -moz-transform: translate3d($xvalue, $yvalue, $zvalue);
+      -ms-transform: translate3d($xvalue, $yvalue, $zvalue);
+          transform: translate3d($xvalue, $yvalue, $zvalue);
+}
+
+// MIXIN: Transform-Skew
+@mixin skew($value) {
+  -webkit-transform: skew($value);
+     -moz-transform: skew($value);
+      -ms-transform: skew($value);
+          transform: skew($value);
+}
+@mixin skewX($value) {
+  -webkit-transform: skewX($value);
+     -moz-transform: skewX($value);
+      -ms-transform: skewX($value);
+          transform: skewX($value);
+}
+@mixin skewY($value) {
+  -webkit-transform: skewY($value);
+     -moz-transform: skewY($value);
+      -ms-transform: skewY($value);
+          transform: skewY($value);
+}
+@mixin skewZ($value) {
+  -webkit-transform: skewZ($value);
+     -moz-transform: skewZ($value);
+      -ms-transform: skewZ($value);
+          transform: skewZ($value);
+}
+
+// MIXIN: Transform-Rotate
+@mixin rotate($value) {
+  -webkit-transform: rotate($value);
+     -moz-transform: rotate($value);
+      -ms-transform: rotate($value);
+          transform: rotate($value);
+}
+@mixin rotateX($value) {
+  -webkit-transform: rotateX($value);
+     -moz-transform: rotateX($value);
+      -ms-transform: rotateX($value);
+          transform: rotateX($value);
+}
+@mixin rotateY($value) {
+  -webkit-transform: rotateY($value);
+     -moz-transform: rotateY($value);
+      -ms-transform: rotateY($value);
+          transform: rotateY($value);
+}
+@mixin rotateZ($value) {
+  -webkit-transform: rotateZ($value);
+     -moz-transform: rotateZ($value);
+      -ms-transform: rotateZ($value);
+          transform: rotateZ($value);
+}
+
+// MIXIN: Transform-Scale
+@mixin scale($value) {
+  -webkit-transform: scale($value);
+     -moz-transform: scale($value);
+      -ms-transform: scale($value);
+          transform: scale($value);
+}
+@mixin scaleX($value) {
+  -webkit-transform: scaleX($value);
+     -moz-transform: scaleX($value);
+      -ms-transform: scaleX($value);
+          transform: scaleX($value);
+}
+@mixin scaleY($value) {
+  -webkit-transform: scaleY($value);
+     -moz-transform: scaleY($value);
+      -ms-transform: scaleY($value);
+          transform: scaleY($value);
+}
+@mixin scaleZ($value) {
+  -webkit-transform: scaleZ($value);
+     -moz-transform: scaleZ($value);
+      -ms-transform: scaleZ($value);
+          transform: scaleZ($value);
+}
+@mixin scale3d($xvalue, $yvalue, $zvalue) {
+  -webkit-transform: scale3d($xvalue, $yvalue, $zvalue);
+     -moz-transform: scale3d($xvalue, $yvalue, $zvalue);
+      -ms-transform: scale3d($xvalue, $yvalue, $zvalue);
+          transform: scale3d($xvalue, $yvalue, $zvalue);
+}
+
+// MIXIN: Transform-Perspective
+@mixin perspective($value) {
+  -webkit-transform: perspective($value);
+     -moz-transform: perspective($value);
+      -ms-transform: perspective($value);
+          transform: perspective($value);
+}
+@mixin perspective-origin($value) {
+  -webkit-transform: perspective-origin($value);
+     -moz-transform: perspective-origin($value);
+      -ms-transform: perspective-origin($value);
+          transform: perspective-origin($value);
+}
+
+// MIXIN: Transform-Style
+@mixin transform-style($type) {
+  -webkit-transform-style: $type;
+     -moz-transform-style: $type;
+      -ms-transform-style: $type;
+          transform-style: $type;
+}
+
+// MIXIN: Backface-Visibility
+@mixin backface-visibility($type) {
+-webkit-backface-visibility: $type;
+   -moz-backface-visibility: $type;
+    -ms-backface-visibility: $type;
+        backface-visibility: $type;
+}
