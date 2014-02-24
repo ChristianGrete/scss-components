@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+// MIXIN: Clearfix
+// TEXT: Support >= IE8
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
