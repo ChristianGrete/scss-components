@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+// MIXIN: Transition
+@mixin transition($value) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+      -ms-transition: $value;
+          transition: $value;
+}
+
+// MIXIN: Transition-Property
+@mixin transition-property($property) {
+  -webkit-transition-property: $property;
+     -moz-transition-property: $property;
+      -ms-transition-property: $property;
+          transition-property: $property;
+}
+
+// MIXIN: Transition-Delay
+@mixin transition-delay($value) {
+  -webkit-transition-delay: $value;
+     -moz-transition-delay: $value;
+      -ms-transition-delay: $value;
+          transition-delay: $value;
+}
+
+// MIXIN: Transition-Duration
+@mixin transition-duration($value) {
+  -webkit-transition-duration: $value;
+     -moz-transition-duration: $value;
+      -ms-transition-duration: $value;
+          transition-duration: $value;
+}
+
+// MIXIN: Transition-Timing-Function
+@mixin transition-timing-function($type) {
+  -webkit-transition-timing-function: $type;
+     -moz-transition-timing-function: $type;
+      -ms-transition-timing-function: $type;
+          transition-timing-function: $type;
+}
