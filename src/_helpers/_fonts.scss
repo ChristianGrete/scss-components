@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// MIXIN: Calculate Font-Size
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+// MIXIN: Font-Face
+// REQUIRED: Each file must have the same name
+@mixin font-face($name, $url) {
+  @font-face {
+    font-family: #{$name};
+    src: url('#{$url}.eot');
+    src: url('#{$url}.eot#iefix') format("embedded-opentype"),
+         url('#{$url}.ttf') format('ttf'),
+         url('#{$url}.svg##{$name}') format('svg'),
+         url('#{$url}.woff') format('woff');
+
+    @content;
+  }
+}
