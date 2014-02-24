@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+// MIXIN: Icons
+// AUTHOR: Jayden Seric
+// SOURCE: http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+@mixin icon($position: 'before', $icon: false) {
+  &:#{$position} {
+    @if $icon {
+        content: match($icons, $icon);
+    }
+    @content;
+  }
+}
