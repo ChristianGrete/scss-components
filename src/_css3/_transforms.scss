@@ -2,10 +2,10 @@
 
 // MIXIN: Transform-Translate
 @mixin translate($xvalue, $yvalue) {
-  -webkit-transform: translate($xvalue, yvalue);
-     -moz-transform: translate($xvalue, yvalue);
-      -ms-transform: translate($xvalue, yvalue);
-          transform: translate($xvalue, yvalue);
+  -webkit-transform: translate($xvalue, $yvalue);
+     -moz-transform: translate($xvalue, $yvalue);
+      -ms-transform: translate($xvalue, $yvalue);
+          transform: translate($xvalue, $yvalue);
 }
 @mixin translateX($value) {
   -webkit-transform: translateX($value);
