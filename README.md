@@ -1,21 +1,19 @@
-SCSS-Components
+scss-components
 ===============
+scss-components are a library with much helpers for your process of development with Sass. Basic stuff like calculating font-size, create your own grid and much more - no overdosed stuff.
 
-A package which includes much components and helpers for Scss.
 
 Overview
 ===============
-
 * Create a grid
-* Clearfix
 * Calculate the font-size
-* Simple including your icons
-* Naming breakpoints for each mediaquery which you want
+* Simply include of your icons
+* Naming breakpoints
 * CSS-Triangle
 * SVG-Fallback
-* Crossbrowser-Flexbox
+* Crossbrowser-Flexbox (Not all stuff included)
 * Crossbrowser-Animations
-* Helper-Mixins (Placeholder, User-Select etc.)
+* Helper-Mixins (Placeholder, User-Select, Clearfix, List-Reset etc.)
 
 Structure of scss
 ===============
@@ -27,11 +25,12 @@ Structure of scss
 
 How-To
 ===============
+Take a look at the [website](http://scss-components.com) for more information
 
 ## Addons
 
 ### Grid
-It was never so easy to create your own responsive grid and you are so flexible.
+It was never so easy to create your own responsive grid with the flexibility, which you want.
 
     // Set your maximum cols in the config
     // Use mixin to create your own grid with your class-convention
@@ -87,7 +86,17 @@ It was never so easy to create your own responsive grid and you are so flexible.
     .l-col--6 // Half cols
 
 ### Icons
-Loop through your set of icons
+    // Array for icons
+    $icons: (
+      'css' 'a',
+      'briefcase' 'b',
+      'apple' 'c',
+      'html' 'd',
+      'happy-smiley' 'e',
+      'home' 'f'
+    );
+
+    // Loop through the set of icons
     @each $icon in $icons {
       $name: nth($icon, 1);
       .icon--#{$name} {
@@ -97,6 +106,7 @@ Loop through your set of icons
 
 ### Lists
 Reset list-styles
+
     // Scss
     .element {
       @include list-reset();
@@ -323,18 +333,5 @@ I use for these configuration a _config.scss, which has all the configurations a
 ## Bower
     bower install scss-components
 
-## If you contribute...
-**Install all dependencies**
-
-    npm install
-
-**Release a new version**
-
-    grunt release:{type}
-
-    // Types
-    patch - small fixes
-    minor - new feature
-    mayor - api-change
-
-I am really thankful for all the knowledge and code, which the developers share with us. You benefit of it.
+## License
+Licensed under MIT License
