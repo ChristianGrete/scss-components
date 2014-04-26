@@ -2,6 +2,10 @@ scss-components
 ===============
 scss-components are a library with much helpers for your process of development with Sass. Basic stuff like calculating font-size, create your own grid and much more - no overdosed stuff.
 
+Website / Documentation
+===============
+
+[Check it out here](http://scss-components.com)
 
 Overview
 ===============
@@ -25,7 +29,6 @@ Structure of scss
 
 How-To
 ===============
-Take a look at the [website](http://scss-components.com) for more information
 
 ## Addons
 
