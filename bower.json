@@ -2,14 +2,16 @@
   "name": "scss-components",
   "version": "0.3.0",
   "main": "src/components.scss",
-  "homepage": "git@github.com:timhartmann/scss-components.git",
+  "homepage": "git@github.com:scss-components/scss-components.git",
   "authors": [
     "Tim Hartmann <tim.hartmann93@gmail.com>"
   ],
   "description": "Much helpers for the developmentment with scss.",
   "keywords": [
     "scss",
-    "helpers"
+    "helpers",
+    "library",
+    "frontend"
   ],
   "license": "MIT",
   "ignore": [

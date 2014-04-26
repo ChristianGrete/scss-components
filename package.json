@@ -6,7 +6,7 @@
     "name": "Tim Hartmann",
     "email": "tim@hartmann93@gmail.com"
   },
-  "homepage": "git@github.com:timhartmann/scss-components.git",
+  "homepage": "git@github.com:scss-components/scss-components.git",
   "devDependencies": {
     "grunt": "~0.4.1",
     "bower": "1.x"
