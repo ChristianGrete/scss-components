@@ -1,7 +1,7 @@
 {
   "name": "scss-components",
   "description": "Much helpers for the development with scss.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Tim Hartmann",
     "email": "tim@hartmann93@gmail.com"
