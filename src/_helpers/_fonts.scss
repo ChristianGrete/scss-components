@@ -11,11 +11,11 @@
 @mixin font-face($name, $url) {
   @font-face {
     font-family: #{$name};
-    src: url('#{$url}.eot');
-    src: url('#{$url}.eot#iefix') format("embedded-opentype"),
-         url('#{$url}.ttf') format('ttf'),
-         url('#{$url}.svg##{$name}') format('svg'),
-         url('#{$url}.woff') format('woff');
+    src: url('#{$url}.eot#') format('embedded-opentype'),
+         url('#{$url}.woff2') format('woff2'),
+         url('#{$url}.woff') format('woff'),
+         url('#{$url}.ttf') format('truetype'),
+         url('#{$url}.svg##{$name}') format('svg');
 
     @content;
   }
