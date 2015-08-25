@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 // MIXIN: Transform-Translate
 @mixin translate($xvalue, $yvalue) {
   -webkit-transform: translate($xvalue, $yvalue);
