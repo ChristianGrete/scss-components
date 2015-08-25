@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 // MIXIN: Animation
 @mixin animation($params) {
   -webkit-animation: #{$params};
