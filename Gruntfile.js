@@ -1,23 +1,26 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    bumpup: ['package.json', 'bower.json'],
-    tagrelease: {
-      file: 'package.json',
-      commit:  true,
-      message: 'Release %version%',
-      prefix:  '',
-      annotate: false
+    copy: {
+      src: {
+        cwd: 'src',
+        dest: 'dist',
+        expand: true,
+        src: '**/*.{css,sass,scss}'
+      }
+    },
+    release: {
+      options: {
+        additionalFiles: 'bower.json',
+        beforeRelease: 'copy',
+        commitMessage: 'Release <%= version %>',
+        tagMessage: ''
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-tagrelease');
-  grunt.loadNpmTasks('grunt-bumpup');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-release');
 
   grunt.registerTask('default', []);
-  grunt.registerTask('release', function (type) {
-    type = type ? type : 'patch';
-    grunt.task.run('bumpup:' + type);
-    grunt.task.run('tagrelease');
-  });
 };
