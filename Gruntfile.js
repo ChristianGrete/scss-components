@@ -11,11 +11,10 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib');
   grunt.loadNpmTasks('grunt-tagrelease');
   grunt.loadNpmTasks('grunt-bumpup');
 
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('default', []);
   grunt.registerTask('release', function (type) {
     type = type ? type : 'patch';
     grunt.task.run('bumpup:' + type);
