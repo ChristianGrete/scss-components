@@ -5,8 +5,6 @@
 // Our respond-to mixin, with the new hotness?
 // A little more complicated than previous respond-to mixins, but now runs off of a variable. This is also Rev 1 so if someone can help me make it better, I'm all ears.
 // We need to start with a defaulted breakpoints variable.
-$breakpoints: false !default;
-
 @mixin respond-to($context) {
   @if $breakpoints != false {
     // Check to see if the 2nd item is a number. If it is, we've got a single query
