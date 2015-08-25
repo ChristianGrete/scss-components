@@ -1,12 +1,22 @@
 {
-  "name": "scss-components",
-  "version": "0.3.0",
-  "main": "src/components.scss",
-  "homepage": "git@github.com:scss-components/scss-components.git",
   "authors": [
-    "Tim Hartmann <tim.hartmann93@gmail.com>"
+    {
+      "email": "tim.hartmann93@gmail.com",
+      "homepage": "http://timhartmann.net",
+      "name": "Tim Hartmann"
+    }
   ],
+  "dependencies": {},
   "description": "Much helpers for the developmentment with scss.",
+  "devDependencies": {},
+  "homepage": "https://github.com/scss-components/scss-components",
+  "ignore": [
+    ".gitignore",
+    ".sass-cache/",
+    "Gruntfile.js",
+    "node_modules/",
+    "package.json"
+  ],
   "keywords": [
     "scss",
     "helpers",
@@ -14,10 +24,12 @@
     "frontend"
   ],
   "license": "MIT",
-  "ignore": [
-    "tests",
-    "node_modules",
-    "Gruntfile.js",
-    "package.json"
-  ]
+  "main": "src/components.scss",
+  "name": "scss-components",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scss-components/scss-components.git"
+  },
+  "version": "0.3.0"
 }

@@ -1,18 +1,57 @@
 {
-  "name": "scss-components",
-  "description": "Much helpers for the development with scss.",
-  "version": "0.3.0",
   "author": {
+    "email": "tim@hartmann93@gmail.com",
     "name": "Tim Hartmann",
-    "email": "tim@hartmann93@gmail.com"
+    "url": "http://timhartmann.net"
   },
-  "homepage": "git@github.com:scss-components/scss-components.git",
+  "bugs": {
+    "email": "tim@hartmann93@gmail.com",
+    "url": "https://github.com/scss-components/scss-components/issues"
+  },
+  "contributors": [
+    {
+      "email": "tim@hartmann93@gmail.com",
+      "name": "Tim Hartmann",
+      "url": "http://timhartmann.net"
+    },
+    {
+      "email": "webmaster@christiangrete.com",
+      "name": "Christian Grete",
+      "url": "https://christiangrete.com"
+    }
+  ],
+  "description": "Much helpers for the development with scss.",
+  "dependencies": {},
   "devDependencies": {
+    "bower": "1.x",
     "grunt": "~0.4.1",
-    "bower": "1.x"
-  },
-  "dependencies": {
     "grunt-bumpup": "~0.2.0",
     "grunt-tagrelease": "~0.2.0"
-  }
+  },
+  "files": [
+    "src/**/*.scss"
+  ],
+  "homepage": "https://github.com/scss-components/scss-components",
+  "keywords": [
+    "scss",
+    "helpers",
+    "library",
+    "frontend"
+  ],
+  "license": "MIT",
+  "main": "src/components.scss",
+  "maintainers": [
+    {
+      "email": "tim@hartmann93@gmail.com",
+      "name": "Tim Hartmann",
+      "url": "http://timhartmann.net"
+    }
+  ],
+  "name": "scss-components",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scss-components/scss-components.git"
+  },
+  "version": "0.3.0"
 }
