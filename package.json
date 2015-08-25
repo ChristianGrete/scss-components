@@ -31,7 +31,7 @@
     "npm": "^2.14.0"
   },
   "files": [
-    "src/**/*.scss"
+    "dist/**/*.{css,sass,scss}"
   ],
   "homepage": "https://github.com/scss-components/scss-components",
   "keywords": [
@@ -41,7 +41,7 @@
     "frontend"
   ],
   "license": "MIT",
-  "main": "src/components.scss",
+  "main": "dist/components.scss",
   "maintainers": [
     {
       "email": "tim@hartmann93@gmail.com",
