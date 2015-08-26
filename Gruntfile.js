@@ -5,6 +5,9 @@ module.exports = function(grunt) {
       manifests: './{bower,package}.json'
     },
     scsslint: {
+      options: {
+        config: './config/scss-lint.yml'
+      },
       src: './src/**/*.scss'
     },
     copy: {
