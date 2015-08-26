@@ -1,24 +1,24 @@
 // Functions
-@import '_functions/_match';
+@import '_functions/match';
 
 // Css3
-@import '_css3/_animations',
-        '_css3/_appearance',
-        '_css3/_box-sizing',
-        '_css3/_flexbox',
-        '_css3/_placeholder',
-        '_css3/_transforms',
-        '_css3/_transitions',
-        '_css3/_user-select';
+@import '_css3/animations',
+        '_css3/appearance',
+        '_css3/box-sizing',
+        '_css3/flexbox',
+        '_css3/placeholder',
+        '_css3/transforms',
+        '_css3/transitions',
+        '_css3/user-select';
 
 // Helpers
-@import '_helpers/_clearfix',
-        '_helpers/_fonts',
-        '_helpers/_respond-to';
+@import '_helpers/clearfix',
+        '_helpers/fonts',
+        '_helpers/respond-to';
 
 // Addons
-@import '_addons/_grid',
-        '_addons/_icons',
-        '_addons/_lists',
-        '_addons/_svg',
-        '_addons/_triangle';
+@import '_addons/grid',
+        '_addons/icons',
+        '_addons/lists',
+        '_addons/svg',
+        '_addons/triangle';
