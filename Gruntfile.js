@@ -21,6 +21,7 @@ module.exports = function(grunt) {
     release: {
       options: {
         additionalFiles: './bower.json',
+        beforeBump: 'default',
         beforeRelease: 'copy',
         commitMessage: 'Release <%= version %>',
         tagMessage: ''
