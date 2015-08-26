@@ -1,5 +1,7 @@
 .gitignore
 .sass-cache/
 bower.json
+Gemfile
+Gemfile.lock
 Gruntfile.js
 src/

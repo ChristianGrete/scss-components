@@ -1,17 +1,23 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('./package.json'),
+    jsonlint: {
+      manifests: './{bower,package}.json'
+    },
+    scsslint: {
+      src: './src/**/*.scss'
+    },
     copy: {
       src: {
-        cwd: 'src',
-        dest: 'dist',
+        cwd: './src',
+        dest: './dist',
         expand: true,
-        src: '**/*.{css,sass,scss}'
+        src: '**/*.scss'
       }
     },
     release: {
       options: {
-        additionalFiles: 'bower.json',
+        additionalFiles: './bower.json',
         beforeRelease: 'copy',
         commitMessage: 'Release <%= version %>',
         tagMessage: ''
@@ -19,8 +25,17 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-release');
+  require('load-grunt-tasks')(grunt, {
+    pattern: [
+      'grunt-contrib-*',
+      'grunt-jsonlint',
+      'grunt-release',
+      'grunt-scss-lint'
+    ]
+  });
 
-  grunt.registerTask('default', []);
+  grunt.registerTask('default', [
+    'jsonlint',
+    'scsslint'
+  ]);
 };

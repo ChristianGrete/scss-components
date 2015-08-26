@@ -14,6 +14,8 @@
     ".gitignore",
     ".npmignore",
     ".sass-cache/",
+    "Gemfile",
+    "Gemfile.lock",
     "Gruntfile.js",
     "node_modules/",
     "package.json",
