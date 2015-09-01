@@ -20,7 +20,7 @@
       "url": "https://christiangrete.com"
     }
   ],
-  "description": "Much helpers for the development with scss.",
+  "description": "A collection of many helpers to improve your workflow in SCSS",
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.5.1",
