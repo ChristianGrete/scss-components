@@ -22,10 +22,15 @@
     "src/"
   ],
   "keywords": [
-    "scss",
+    "collection",
+    "components",
+    "frontend",
     "helpers",
     "library",
-    "frontend"
+    "sass",
+    "scss",
+    "standards",
+    "tools"
   ],
   "license": "MIT",
   "main": "dist/components.scss",
