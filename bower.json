@@ -19,6 +19,7 @@
     "Gruntfile.js",
     "node_modules/",
     "package.json",
+    "sache.json",
     "src/"
   ],
   "keywords": [
