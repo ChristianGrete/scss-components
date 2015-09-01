@@ -9,9 +9,9 @@
     @content;
   }
   @if $direction == 'top' {
+    border-bottom: $size solid $color;
     border-left: $size solid transparent;
     border-right: $size solid transparent;
-    border-bottom: $size solid $color;
 
     @content;
   }

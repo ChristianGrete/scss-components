@@ -23,13 +23,18 @@
   "description": "Much helpers for the development with scss.",
   "dependencies": {},
   "devDependencies": {
-    "bower": "1.x",
-    "grunt": "~0.4.1",
-    "grunt-bumpup": "~0.2.0",
-    "grunt-tagrelease": "~0.2.0"
+    "bower": "^1.5.1",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-copy": "^0.8.1",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-release": "^0.13.0",
+    "grunt-scss-lint": "^0.3.8",
+    "load-grunt-tasks": "^3.2.0",
+    "npm": "^2.14.0"
   },
   "files": [
-    "src/**/*.scss"
+    "dist/**/*.{css,sass,scss}"
   ],
   "homepage": "https://github.com/scss-components/scss-components",
   "keywords": [
@@ -39,7 +44,7 @@
     "frontend"
   ],
   "license": "MIT",
-  "main": "src/components.scss",
+  "main": "dist/components.scss",
   "maintainers": [
     {
       "email": "tim@hartmann93@gmail.com",
@@ -53,5 +58,5 @@
     "type": "git",
     "url": "git://github.com/scss-components/scss-components.git"
   },
-  "version": "0.3.0"
+  "version": "1.0.2"
 }

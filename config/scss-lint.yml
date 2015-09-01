@@ -1,0 +1,21 @@
+linters:
+  DuplicateProperty:
+    enabled: false
+
+  ElsePlacement:
+    enabled: false
+
+  EmptyLineBetweenBlocks:
+    enabled: false
+
+  FinalNewline:
+    enabled: false
+
+  Indentation:
+    enabled: false
+
+  NameFormat:
+    enabled: false
+
+  VendorPrefix:
+    enabled: false

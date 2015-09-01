@@ -12,10 +12,14 @@
   "homepage": "https://github.com/scss-components/scss-components",
   "ignore": [
     ".gitignore",
+    ".npmignore",
     ".sass-cache/",
+    "Gemfile",
+    "Gemfile.lock",
     "Gruntfile.js",
     "node_modules/",
-    "package.json"
+    "package.json",
+    "src/"
   ],
   "keywords": [
     "scss",
@@ -24,12 +28,12 @@
     "frontend"
   ],
   "license": "MIT",
-  "main": "src/components.scss",
+  "main": "dist/components.scss",
   "name": "scss-components",
   "private": false,
   "repository": {
     "type": "git",
     "url": "git://github.com/scss-components/scss-components.git"
   },
-  "version": "0.3.0"
+  "version": "1.0.2"
 }

@@ -1,23 +1,45 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    bumpup: ['package.json', 'bower.json'],
-    tagrelease: {
-      file: 'package.json',
-      commit:  true,
-      message: 'Release %version%',
-      prefix:  '',
-      annotate: false
+    pkg: grunt.file.readJSON('./package.json'),
+    jsonlint: {
+      manifests: './{bower,package}.json'
+    },
+    scsslint: {
+      options: {
+        config: './config/scss-lint.yml'
+      },
+      src: './src/**/*.scss'
+    },
+    copy: {
+      src: {
+        cwd: './src',
+        dest: './dist',
+        expand: true,
+        src: '**/*.scss'
+      }
+    },
+    release: {
+      options: {
+        additionalFiles: './bower.json',
+        beforeBump: 'default',
+        beforeRelease: 'copy',
+        commitMessage: 'Release <%= version %>',
+        tagMessage: ''
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-tagrelease');
-  grunt.loadNpmTasks('grunt-bumpup');
-
-  grunt.registerTask('default', []);
-  grunt.registerTask('release', function (type) {
-    type = type ? type : 'patch';
-    grunt.task.run('bumpup:' + type);
-    grunt.task.run('tagrelease');
+  require('load-grunt-tasks')(grunt, {
+    pattern: [
+      'grunt-contrib-*',
+      'grunt-jsonlint',
+      'grunt-release',
+      'grunt-scss-lint'
+    ]
   });
+
+  grunt.registerTask('default', [
+    'jsonlint',
+    'scsslint'
+  ]);
 };

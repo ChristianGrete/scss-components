@@ -2,8 +2,9 @@ scss-components
 ===============
 scss-components are a library with much helpers for your process of development with Sass. Basic stuff like calculating font-size, create your own grid and much more - no overdosed stuff.
 
+
 Website / Documentation
-===============
+=======
 
 [Check it out here](http://scss-components.com)
 
@@ -89,7 +90,11 @@ It was never so easy to create your own responsive grid with the flexibility, wh
     .l-col--6 // Half cols
 
 ### Icons
-    // Array for icons
+=======
+
+It's easy to get some icons. You must only set an object in your config and include the mixin.
+
+    // Create the object
     $icons: (
       'css' 'a',
       'briefcase' 'b',
@@ -338,3 +343,18 @@ I use for these configuration a _config.scss, which has all the configurations a
 
 ## License
 Licensed under MIT License
+
+## Grunt
+
+**Install all dependencies**
+
+    npm install
+
+**Release a new version**
+
+    grunt release:{type}
+
+    // Types
+    patch - small fixes
+    minor - new feature
+    mayor - api-change

@@ -1,5 +1,5 @@
 // MIXIN: Appearance
-@mixin appearance($type){
+@mixin appearance($type) {
  -webkit-appearance: $type;
     -moz-appearance: $type;
          appearance: $type;
